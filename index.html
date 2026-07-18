@@ -748,7 +748,40 @@
             color: var(--accent-color);
         }
 
-        /* Toàn màn hình Infographic */
+        /* Phong cách hiển thị ảnh minh chứng */
+        .evidence-wrapper {
+            margin: 30px 0;
+            text-align: center;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid var(--glass-border);
+            box-shadow: 0 0 25px rgba(147, 112, 219, 0.2);
+            background: rgba(0,0,0,0.4);
+            position: relative;
+        }
+
+        .evidence-wrapper img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .evidence-wrapper:hover img {
+            transform: scale(1.02);
+        }
+
+        .evidence-caption {
+            background: rgba(20, 15, 38, 0.9);
+            padding: 12px;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--accent-color);
+            border-top: 1px solid var(--glass-border);
+        }
+
+        /* Khung hiển thị Infographic riêng */
         .infographic-wrapper {
             margin: 30px 0;
             text-align: center;
@@ -1079,6 +1112,14 @@
                             <div class="step-desc">Tớ ra ngoài màn hình nền Desktop, tìm biểu tượng <code>Recycle Bin</code> và nhấp đúp để mở. Tìm tệp <code>GhiChuQuanTrong.txt</code> đã xóa ở Bước 10, nhấp chuột phải vào tệp và chọn <code>Restore</code>. Tệp lập tức quay trở lại vị trí gốc của nó bên trong thư mục <code>TaiLieu</code> một cách kì diệu!</div>
                         </div>
                     </div>
+
+                    <!-- MINH CHỨNG ẢNH BẬT FULL SIZE CHO BÀI 1 -->
+                    <h3 style="color: white; margin: 25px 0 12px 0; font-size: 16px;"><i class="fa-solid fa-image" style="color: var(--accent-color);"></i> Ảnh minh chứng thực hành:</h3>
+                    <div class="evidence-wrapper">
+                        <img src="b1.jpg" alt="Minh chứng bài thực hành 1">
+                        <div class="evidence-caption"><i class="fa-solid fa-magnifying-glass-plus"></i> Thư mục học tập ThucHanh_NguyenThiThanhHa trên ổ đĩa New Volume (D:) chứa thư mục TaiLieu, tệp Dichuyen.txt và GhiChuQuanTrong.txt</div>
+                    </div>
+
                     <div class="reflection-block">
                         <h4><i class="fa-solid fa-graduation-cap"></i> Bài học rút ra:</h4>
                         <p>Thao tác cơ bản là nền móng của sự chuyên nghiệp. Khi rèn luyện hết 12 bước này, tớ hiểu sâu sắc cách máy tính quản lý bộ nhớ tạm, thùng rác, và thói quen đặt tên file không dấu gạch ngang giúp tránh lỗi đường dẫn khi học lập trình hoặc chạy thuật toán số hóa sau này.</p>
@@ -1147,7 +1188,7 @@
                                     <td>4</td>
                                     <td>5</td>
                                     <td>Khá cao</td>
-                                    <td>Rất liên quan đến cộng đồng học tập trực tuyến, thảo luận về cách giới trẻ tiếp thu ngôn ngữ qua các fanfiction.</td>
+                                    <td>Rần liên quan đến cộng đồng học tập trực tuyến, thảo luận về cách giới trẻ tiếp thu ngôn ngữ qua các fanfiction.</td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
@@ -1245,7 +1286,7 @@
 
                     <div class="reflection-block">
                         <h4><i class="fa-solid fa-graduation-cap"></i> Bài học rút ra:</h4>
-                        <p>Tớ đúc kết được rằng: <strong>Không phải Prompt càng dài thì AI trả lời càng tốt</strong>. Điều cốt lõi là cấu trúc câu lệnh phải đáp ứng các nguyên tắc cơ bản: <em>Role Prompting</em> (đóng vai), <em>Constraint Prompting</em> (ràng buộc rõ về độ dài, ngôn ngữ) và <em>Structured Prompting</em> (quy định rõ các đầu mục hiển thị). Khi áp dụng đủ, kết quả của AI sẽ vượt trội và không bao giờ bị trả lời lan man!</p>
+                        <p>Tớ đúc kết được rằng: <strong>Không phải Prompt càng dài thì AI trả lời càng tốt</strong>. Điều cốt lộ là cấu trúc câu lệnh phải đáp ứng các nguyên tắc cơ bản: <em>Role Prompting</em> (đóng vai), <em>Constraint Prompting</em> (ràng buộc rõ về độ dài, ngôn ngữ) và <em>Structured Prompting</em> (quy định rõ các đầu mục hiển thị). Khi áp dụng đủ, kết quả của AI sẽ vượt trội và không bao giờ bị trả lời lan man!</p>
                     </div>
                 </div>
 
@@ -1256,7 +1297,7 @@
                         <span><i class="fa-solid fa-bullseye"></i> Mục tiêu: Thực hành phối hợp nhiều công cụ làm việc trực tuyến (Trello, Google Drive, Docs, Discord, Zalo) và rèn luyện năng lực lãnh đạo đội nhóm.</span>
                     </div>
                     <p class="task-intro">
-                        Trong đợt làm bài tập lớn về đề tài <strong>"Ứng dụng của AI trong học ngoại ngữ và giáo dục"</strong>, tớ đã đảm nhận vai trò <strong>Trưởng nhóm</strong>. Hãy cùng khám phá nhật ký hành trình 1 tuần của nhóm tớ nhé!
+                        Trong đợt làm bài tập lớn về đề tài <strong>"Ứng dụng của AI trong học ngoại ngữ và giáo dục"</strong>, tớ đã đảm nhận vai trò <strong>Nhóm trưởng</strong>. Hãy cùng khám phá nhật ký hành trình 1 tuần của nhóm tớ nhé!
                     </p>
 
                     <h3 style="color: white; margin-bottom: 12px; font-size: 16px;"><i class="fa-solid fa-calendar-days" style="color: var(--accent-color);"></i> Nhật ký hoạt động nhóm 1 tuần:</h3>
@@ -1281,6 +1322,13 @@
                             <div class="step-title">Ngày 15/06: Đánh giá tiến độ dự án <span class="step-tag">Discord Chat</span></div>
                             <div class="step-desc">Tớ tổ chức cuộc họp đàm thoại trực tuyến bằng Discord để cùng kiểm tra tiến độ của từng bạn, giải quyết các khó khăn vấp phải và cùng thống nhất để hoàn thành sản phẩm cuối cùng chuẩn chỉ.</div>
                         </div>
+                    </div>
+
+                    <!-- MINH CHỨNG ẢNH BẬT FULL SIZE CHO BÀI 4 -->
+                    <h3 style="color: white; margin: 25px 0 12px 0; font-size: 16px;"><i class="fa-solid fa-image" style="color: var(--accent-color);"></i> Ảnh minh chứng hoạt động nhóm:</h3>
+                    <div class="evidence-wrapper">
+                        <img src="b4.jpg" alt="Minh chứng bài thực hành 4">
+                        <div class="evidence-caption"><i class="fa-solid fa-magnifying-glass-plus"></i> Minh chứng quản lý dự án trên Trello, phân quyền Google Drive, folder Drive và kênh chat Discord học tập</div>
                     </div>
 
                     <div class="summary-grid" style="margin-top: 30px;">
